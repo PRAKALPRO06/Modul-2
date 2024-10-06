@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var K_226 int
+	var sqrt2 float64 = 1.0
+
+	fmt.Print("Nilai K =")
+	fmt.Scan(&K_226)
+
+	for i := 0; i <= K_226; i++ {
+		atas := (4*float64(i) + 2) * (4*float64(i) + 2)
+		bawah := (4*float64(i) + 1) * (4*float64(i) + 3)
+		sqrt2 *= atas / bawah
+	}
+
+	fmt.Printf("Nilai akar 2 = %.10f\n", sqrt2)
+}
