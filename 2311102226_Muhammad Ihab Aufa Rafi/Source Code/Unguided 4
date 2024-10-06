@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+    pita := ""
+    hitungBunga_226 := 0
+
+    for {
+        var bunga_226 string
+        fmt.Printf("Bunga %d: ", hitungBunga_226+1)
+        fmt.Scan(&bunga_226)
+
+        if strings.ToUpper(bunga_226) == "SELESAI" {
+            break
+        }
+
+        if pita == "" {
+            pita = bunga_226
+        } else {
+            pita += " - " + bunga_226
+        }
+
+        hitungBunga_226++
+    }
+
+    fmt.Println("Pita:", pita)
+    fmt.Println("Bunga:", hitungBunga_226)
+}
