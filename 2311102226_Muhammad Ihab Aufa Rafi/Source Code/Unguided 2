@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+
+    var angka1_226, angka2_226, angka3_226, angka4_226, angka5_226 int
+    fmt.Println("Masukkan 5 angka integer (32 - 127) dipisahkan spasi:")
+    fmt.Scan(&angka1_226, &angka2_226, &angka3_226, &angka4_226, &angka5_226)
+
+    var char_226 string
+    fmt.Println("Masukkan 3 karakter (tanpa spasi):")
+    fmt.Scan(&char_226)
+
+	fmt.Println("Karakter dari angka berdasarkan ASCII:")
+    fmt.Printf("%c%c%c%c%c\n", angka1_226, angka2_226, angka3_226, angka4_226, angka5_226)
+
+    fmt.Println("3 karakter setelah input berdasarkan ASCII:")
+    for _, char_226 := range char_226 {
+        fmt.Printf("%c", char_226+3)
+    }
+    fmt.Println()
+}
