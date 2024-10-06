@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+
+    var C_226 float64
+    fmt.Print("Masukkan Temperatur Celsius: ")
+    fmt.Scanln(&C_226)
+
+    F_226 := (C_226 * 9/5) + 32
+    R_226 := C_226 * 4/5
+    K_226 := C_226 + 273.15
+
+	fmt.Printf("Temperatur Reamur: %.2f °Re\n", R_226)
+    fmt.Printf("Temperatur Fahrenheit: %.2f °F\n", F_226)
+    fmt.Printf("Temperatur Kelvin: %.2f K\n", K_226)
+}
