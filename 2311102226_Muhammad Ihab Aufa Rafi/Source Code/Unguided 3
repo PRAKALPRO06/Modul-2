@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var warna1_226, warna2_226, warna3_226, warna4_226 string
+	var berhasil bool = true
+
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("Masukkan warna cairan pada gelas 1-4 (percobaan ke-%d, pisahkan dengan spasi): ", i)
+		fmt.Scanln(&warna1_226, &warna2_226, &warna3_226, &warna4_226)
+
+		if !strings.EqualFold(warna1_226, "merah") ||
+			!strings.EqualFold(warna2_226, "kuning") ||
+			!strings.EqualFold(warna3_226, "hijau") ||
+			!strings.EqualFold(warna4_226, "ungu") {
+			berhasil = false
+			break
+		}
+	}
+	fmt.Println("BERHASIL:", berhasil)
+}
