@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var beratKiri_226, beratKanan_226 float64
+
+	for {
+		fmt.Print("Masukkan berat belanjaan di kedua kantong: ")
+		fmt.Scan(&beratKiri_226, &beratKanan_226)
+
+		totalBerat := beratKiri_226 + beratKanan_226
+
+		if totalBerat > 150 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		selisih := math.Abs(beratKiri_226 - beratKanan_226)
+		oleng := selisih >= 9
+
+		fmt.Printf("Sepeda motor pak Andi akan oleng: %t\n", oleng)
+	}
+}
