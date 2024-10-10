@@ -1,0 +1,1 @@
+fmt.Printf("%v+%v\n",a,b,a+b)
